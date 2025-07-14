@@ -5,13 +5,7 @@ public class PathResult {
     private List<String> path;
     private double totalTime;
     private List<String> instructions; // New field for turn instructions
-
-    /**
-     * Constructor for PathResult.
-     * @param path The list of node IDs forming the shortest path.
-     * @param totalTime The total calculated travel time for the path.
-     * @param instructions A list of human-readable turn-by-turn instructions.
-     */
+  
     public PathResult(List<String> path, double totalTime, List<String> instructions) {
         this.path = path;
         this.totalTime = totalTime;
