@@ -1,7 +1,5 @@
 import java.util.*;
 
-// PathNode is a helper class for Pathfinder and can be defined in the same file
-// or in its own PathNode.java file. For this example, it's included here.
 class PathNode implements Comparable<PathNode> {
     String nodeId;
     double cost;
@@ -24,14 +22,9 @@ public class Pathfinder {
         this.graph = graph;
     }
 
-    /**
-     * Finds the shortest path using Dijkstra's algorithm, considering time-dependent traffic,
-     * and generates human-readable turn instructions.
-     * @param startNodeId The ID of the starting node.
-     * @param endNodeId The ID of the ending node.
-     * @param hourOfDay The hour of the day (0-23) for which to calculate traffic.
-     * @return A PathResult object containing the path, total travel time, and instructions.
-     */
+  
+     // Finds the shortest path using Dijkstra's algorithm, considering time-dependent traffic, and generates human-readable turn instructions.
+    
     public PathResult findPath(String startNodeId, String endNodeId, int hourOfDay) {
         // Validate start and end nodes
         if (graph.getNode(startNodeId) == null || graph.getNode(endNodeId) == null) {
@@ -128,14 +121,9 @@ public class Pathfinder {
                     instructions.add((i + 2) + ". Head onto " + nextRoadName + ".");
                 } else if (!nextRoadName.equals(currentRoadName)) {
                     // Road name changed, implies a turn
-                    // For simplicity, we just say "Turn onto".
-                    // A more advanced system would calculate left/right turns based on coordinates
-                    // and the angle between the previous and current edge.
                     instructions.add((i + 2) + ". Turn onto " + nextRoadName + " at " + u + ".");
                 } else {
                     // Continue on the same road
-                    // Only add "Continue" if it's not the very next instruction after a turn
-                    // This avoids redundant "Continue" messages for short segments on the same road
                     if (instructions.size() > 0 && !instructions.get(instructions.size() - 1).contains("Head onto") &&
                         !instructions.get(instructions.size() - 1).contains("Turn onto")) {
                         // Avoid consecutive "Continue" if the road is very long and has intermediate nodes
