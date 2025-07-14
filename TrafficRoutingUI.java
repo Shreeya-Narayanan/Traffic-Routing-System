@@ -1,4 +1,4 @@
-/*     UI for further enhancement
+ //  UI for further enhancement
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -344,4 +344,3 @@ public class TrafficRoutingSystem extends Application {
         launch(args);
     }
 }
-*/
