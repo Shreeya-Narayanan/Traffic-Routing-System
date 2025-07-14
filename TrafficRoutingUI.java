@@ -15,16 +15,12 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
 
-// Import the core logic classes from their respective files
-// These classes are now expected to be in their own .java files in the same directory
-// or properly configured in your project's build path.
-// For this example, we assume they are in the same directory.
-// import Node; // No explicit import needed if in same package/default package
+// import Node; 
 // import Edge;
 // import Graph;
 // import Pathfinder;
 // import PathResult;
-// import PathNode; // PathNode is an inner class of Pathfinder, so not directly imported
+// import PathNode; 
 
 public class TrafficRoutingSystem extends Application {
 
