@@ -58,7 +58,7 @@ public class Graph { // Made public
             }
         }
         return null;
-        // Note: For very large graphs, iterating through all edges might be slow.
+        // For very large graphs, iterating through all edges might be slow.
         // A more optimized approach for getting a specific edge would be to
         // store edges in a Map<String, Map<String, Edge>> where keys are startNodeId and endNodeId.
     }
